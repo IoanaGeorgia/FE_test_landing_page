@@ -12,6 +12,30 @@
 </head>
 
 <body>
+    <div id="modal">
+        <form autocomplete="off">
+            <button class="closeModal" onclick="closeModalFromButton(event)">+</button>
+            <label>First name:</label>
+            <br>
+            <input type="text">
+            <br>
+            <label>Last name:</label>
+            <br>
+            <input type="text">
+            <br>
+            <label>Phone:</label>
+            <br>
+            <input type="text">
+            <br>
+            <label>Your message:</label>
+            <br>
+            <textarea></textarea>
+
+
+            <button class="modalButton" onclick="closeModalFromButton(event)">Submit</button>
+
+        </form>
+    </div>
     <header>
         <div class="logo"><img src='./images/logo.png' alt="FXORO logo"></div>
     </header>
@@ -29,7 +53,7 @@
                         future.
                     </span>
                 </p>
-                <button>Learn more</button>
+                <button class="modalButton" onclick="openModalFromButton()">Learn more</button>
                 <div>
                     <p>Trading is risky.</p>
                     <p>You may lose your entire capital.</p>
@@ -39,7 +63,6 @@
 
 
             <div class="introImage">
-                <!-- <img src="./images/landing_image.png"> -->
                 <picture>
                     <source media="(min-width:1126px)" srcset="./images/landing_image.png">
                     <source media="(max-width:800px)" srcset="./images/landing_image_mobile.png">
@@ -122,7 +145,7 @@
 
         </section>
         <section class="actionWrapper">
-            <button>Learn more</button>
+            <button class="modalButton" onclick="openModalFromButton()">Learn more</button>
             <div>
                 <p>Trading is risky.</p>
                 <p>You may lose your entire capital.</p>
@@ -209,6 +232,27 @@
         </p>
 
     </footer>
+
+
+    <script>
+        let modal=document.getElementById('modal')
+
+        modal.addEventListener('click', function(event){
+            console.log(event.target)
+            if(event.target.matches('#modal')){
+                closeModalFromButton(event)
+            }
+        })
+
+        function closeModalFromButton(event){
+            event.preventDefault()
+            modal.style.display='none'
+            document.querySelectorAll("input").forEach(value => value.value = '');
+        }
+        function openModalFromButton(){
+            modal.style.display='block'
+        }
+    </script>
 </body>
 
 </html>
