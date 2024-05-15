@@ -1,0 +1,317 @@
+:root{
+    --darkBlue:rgb(39, 55, 115);
+    --lightBlue:rgb(27, 117, 186);
+    --yellow:rgb(255, 177, 10);
+    --orange:rgb(239, 89, 39);
+}
+/* nu au fost folosite variabile pentru ca unele browsere nu le sustin */
+
+@font-face {
+  font-family: montserrat;
+  src: url(./assets/Montserrat-VariableFont_wght.ttf);
+}
+
+*{
+    font-family: montserrat;
+    line-height:140%;
+    padding:0px;
+    margin:0px;
+}
+button{
+    cursor: pointer;
+}
+header{
+    padding:2rem 0rem;
+    margin-left:12%;
+
+}
+.intro{
+    display: flex;
+}
+.introText{
+    margin-left:12%;
+    width:50%;
+}
+.introText > p:first-of-type{
+    font-size:2.4rem;
+    color:rgb(39, 55, 115);
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin-top:10%;
+    text-wrap: nowrap;
+}
+.introText p:first-of-type span{
+    color:rgb(27, 117, 186);
+}
+.defaultInfoText{
+    font-size:1.50rem;
+    width:90%;
+    padding:1.5rem 0rem;
+}
+.defaultInfoText span span{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.defaultInfoText span span span{
+    color:rgb(255, 177, 10)
+}
+.introText button, .actionWrapper button{
+    background-color: rgb(239, 89, 39);
+    padding:0.8rem 4rem;
+    border:none;
+    color:white;
+    font-size:18px;
+    font-weight: bolder;
+  
+
+}
+.introText button{
+    margin-bottom: 1rem;
+      margin:1.28rem 0rem;
+}
+.introText > div:last-of-type{
+    width:35%;
+    font-size:12px;
+    text-align: center;
+}
+
+.introImage{
+    margin-top:-5%;
+    min-width:40%;
+    background-color: white;
+    position: relative;
+    z-index:-1;
+
+}
+.introImage img{
+    width:100%;
+    height:100%;
+}
+.introDetails > *{
+    margin-left:12%;
+}
+.introDetails{
+    border-top:4px solid rgb(39, 55, 115);
+    padding:1rem 0rem;
+}
+.defaultTitle{
+    color:rgb(39, 55, 115);
+    font-size:25px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.defaultText{
+    font-size:18px;
+}
+.introDetails p{
+    padding:1rem 0rem;
+}
+.introDetails p:last-of-type{
+    width:70%;
+}
+.stepsWrapper{
+    background-color: rgb(39, 55, 115);
+    display: flex;
+    padding:5% 12%;
+    justify-content: flex-start;
+    align-content:flex-start;
+    gap:2rem;
+}
+.step div:has(img){
+    min-width:199px;
+    min-height:199px;
+
+}
+
+.stepsWrapper:nth-of-type(2){
+    background-color: white;
+}
+
+.stepsWrapper:nth-of-type(2) .step *{
+    color:rgb(39, 55, 115);
+}
+.step p:nth-of-type(2), .stepsWrapper:nth-of-type(2) .step p:nth-last-of-type(2){
+    color:rgb(255, 177, 10);
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding-bottom:1rem;
+
+}
+.stepsWrapper:nth-of-type(2) .step:nth-of-type(2n+1) p:nth-last-of-type(2){
+    width:80%;
+}
+
+.stepsWrapper .step *{
+    display: block;
+    margin: auto;
+    text-align: center;
+      font-size:18px;
+      color:White;
+}
+.stepNumber{
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+    padding-top:1rem;
+}
+.stepNumber:after{
+    content:'.'
+}
+.step p:last-of-type{
+    width:80%;
+}
+
+.stepsWrapper:nth-of-type(2) .step p:last-of-type{
+    width:68%;
+}
+.actionWrapper{
+    background-color: rgb(39, 55, 115);
+    padding:2rem 0rem;
+}
+.actionWrapper *{
+    text-align: center;
+    display: block;
+    margin: auto;
+    color:white;
+    font-size:12px;
+}
+.actionWrapper button{
+    margin-bottom:2rem;
+}
+.valuesWrapper{
+    padding:2rem 12%;
+    padding-bottom: 0rem;
+}
+.valuesWrapper span{
+    color:rgb(255, 177, 10);
+}
+.valuesWrapper > div{
+    text-align: center;
+}
+.valuesWrapper > div .value{
+    display: inline-block;
+    width:20%;
+    text-align: center;
+    font-size:18px;
+    padding:2rem;
+}
+.value p:nth-of-type(1){
+    color:rgb(39, 55, 115);
+    font-weight: bolder;
+    width:80%;
+    padding:0rem 10%;
+    padding-bottom:2rem;
+
+}
+footer{
+    background-color: rgb(23, 23, 23);
+    padding:1rem 12%;
+    color:white;
+    text-align: center;
+    font-size:10px;
+}
+footer p{
+    margin:2rem 0rem;
+}
+@media (max-width:1126px) and (min-width:801px){
+    .introImage{
+       display: none;
+}
+
+    .introText{
+        width:100%;
+        
+    }
+    .intro{
+        padding-bottom:10rem;
+    }
+    .introText > div:last-of-type{
+        width: 15rem;;
+    }
+    .stepsWrapper{
+        flex-wrap:wrap;
+        gap:3rem;
+        justify-content: space-evenly;
+        
+    }
+    .step{
+        width:40%;
+    }    
+    .valuesWrapper{
+        text-align: center;
+        padding:1rem 0rem;
+    }
+    .valuesWrapper > div .value{
+        display: block;
+        margin: auto;
+        width:60%;
+    }
+}
+@media (max-width:800px){
+    header{
+        margin-left:unset;
+        text-align: center;
+    }
+    .intro{
+        flex-direction: column;
+        
+    }
+    .introText, .defaultInfoText, .introText > div:last-of-type{
+        width:100%;
+        margin-left: unset;
+         text-align: center;
+    }
+    .introText{
+        padding: 2rem;
+    box-sizing: border-box;
+    }
+    .introText p:first-of-type{
+        text-wrap: wrap;
+       
+    }
+    .defaultInfoText > span{
+        display: block;
+    }
+    .introText button{
+        width:100%;
+    }
+    .introImage{
+        margin-top:5%;
+    }
+    .introDetails{
+        padding:2rem;
+    }
+    .introDetails > *{
+        text-align: center;
+       margin-left: unset;
+    }
+    .introDetails p:last-of-type{
+        width:100%;
+    }
+    .stepsWrapper{
+        flex-direction: column;
+    
+    }
+    .stepsWrapper:nth-of-type(2) .step:nth-of-type(3) p:nth-last-of-type(2){
+        width:unset;
+    }
+    .actionWrapper{
+        padding:1rem 1rem;
+    }
+    .actionWrapper button{
+        width:100%;
+        margin-bottom: 1rem;
+    }
+    .valuesWrapper{
+        text-align: center;
+        padding:1rem 0rem;
+    }
+    .valuesWrapper > div .value{
+        display: block;
+        margin: auto;
+        width:60%;
+    }
+    footer{
+        padding:1rem;
+    }
+}
