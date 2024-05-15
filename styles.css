@@ -9,6 +9,7 @@
 @font-face {
   font-family: montserrat;
   src: url(./assets/Montserrat-VariableFont_wght.ttf);
+  font-display: swap;
 }
 
 *{
@@ -201,8 +202,8 @@ header{
     gap:2rem;
 }
 .step div:has(img){
-    min-width:199px;
-    min-height:199px;
+    width:199px;
+    height:199px;
 
 }
 
